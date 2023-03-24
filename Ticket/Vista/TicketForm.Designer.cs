@@ -39,8 +39,20 @@
             this.label4 = new System.Windows.Forms.Label();
             this.BuscarClienteButton = new System.Windows.Forms.Button();
             this.NombreClienteTextBox = new System.Windows.Forms.TextBox();
+            this.DetalleDataGridView = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.SubTotalTextBox = new System.Windows.Forms.TextBox();
+            this.ISVTextBox = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.DescuentoTextBox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.TotalTextBox = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.GuardarButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DetalleDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -110,7 +122,7 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Location = new System.Drawing.Point(12, 94);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(808, 76);
+            this.groupBox2.Size = new System.Drawing.Size(808, 61);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos Cliente";
@@ -149,12 +161,127 @@
             this.NombreClienteTextBox.Size = new System.Drawing.Size(445, 22);
             this.NombreClienteTextBox.TabIndex = 5;
             // 
+            // DetalleDataGridView
+            // 
+            this.DetalleDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DetalleDataGridView.Location = new System.Drawing.Point(0, 176);
+            this.DetalleDataGridView.Name = "DetalleDataGridView";
+            this.DetalleDataGridView.Size = new System.Drawing.Size(830, 137);
+            this.DetalleDataGridView.TabIndex = 3;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(593, 445);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(74, 16);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "SubTotal:";
+            // 
+            // SubTotalTextBox
+            // 
+            this.SubTotalTextBox.Location = new System.Drawing.Point(702, 442);
+            this.SubTotalTextBox.Name = "SubTotalTextBox";
+            this.SubTotalTextBox.Size = new System.Drawing.Size(128, 22);
+            this.SubTotalTextBox.TabIndex = 5;
+            // 
+            // ISVTextBox
+            // 
+            this.ISVTextBox.Location = new System.Drawing.Point(702, 470);
+            this.ISVTextBox.Name = "ISVTextBox";
+            this.ISVTextBox.ReadOnly = true;
+            this.ISVTextBox.Size = new System.Drawing.Size(128, 22);
+            this.ISVTextBox.TabIndex = 7;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(593, 473);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 16);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "ISV:";
+            // 
+            // DescuentoTextBox
+            // 
+            this.DescuentoTextBox.Location = new System.Drawing.Point(702, 498);
+            this.DescuentoTextBox.Name = "DescuentoTextBox";
+            this.DescuentoTextBox.Size = new System.Drawing.Size(128, 22);
+            this.DescuentoTextBox.TabIndex = 9;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(593, 501);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(85, 16);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Descuento:";
+            // 
+            // TotalTextBox
+            // 
+            this.TotalTextBox.Location = new System.Drawing.Point(702, 526);
+            this.TotalTextBox.Name = "TotalTextBox";
+            this.TotalTextBox.ReadOnly = true;
+            this.TotalTextBox.Size = new System.Drawing.Size(128, 22);
+            this.TotalTextBox.TabIndex = 11;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(590, 529);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(106, 16);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Total a Pagar:";
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Image = global::Vista.Properties.Resources.prohibido;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(125, 491);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(100, 45);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "Cancelar";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // GuardarButton
+            // 
+            this.GuardarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GuardarButton.Image = global::Vista.Properties.Resources.disco_flexible;
+            this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.GuardarButton.Location = new System.Drawing.Point(8, 491);
+            this.GuardarButton.Name = "GuardarButton";
+            this.GuardarButton.Size = new System.Drawing.Size(100, 45);
+            this.GuardarButton.TabIndex = 12;
+            this.GuardarButton.Text = "Guardar";
+            this.GuardarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.GuardarButton.UseVisualStyleBackColor = true;
+            // 
             // TicketForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(832, 355);
+            this.ClientSize = new System.Drawing.Size(832, 548);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.GuardarButton);
+            this.Controls.Add(this.TotalTextBox);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.DescuentoTextBox);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.ISVTextBox);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.SubTotalTextBox);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.DetalleDataGridView);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -166,6 +293,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DetalleDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,5 +312,16 @@
         private System.Windows.Forms.Button BuscarClienteButton;
         private System.Windows.Forms.TextBox IdentidadTextBox;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridView DetalleDataGridView;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox SubTotalTextBox;
+        private System.Windows.Forms.TextBox ISVTextBox;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox DescuentoTextBox;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox TotalTextBox;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button GuardarButton;
+        private System.Windows.Forms.Button button2;
     }
 }

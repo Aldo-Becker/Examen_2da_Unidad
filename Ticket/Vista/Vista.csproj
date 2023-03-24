@@ -137,5 +137,11 @@
       <Name>Entidades</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prohibido.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disco-flexible.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
