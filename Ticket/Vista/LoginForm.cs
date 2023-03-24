@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Datos;
+using Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -38,42 +40,33 @@ namespace Vista
             }
             errorProvider1.Clear();
 
-            //Login login = new Login(UsuarioTextBox.Text, ContraseñaTextBox.Text);
-            //Usuario usuario = new Usuario();
-            //UsuarioDB usuarioDB = new UsuarioDB();
+            Login login = new Login(UsuarioTextBox.Text, ContraseñaTextBox.Text);
+            Usuario usuario = new Usuario();
+            UsuarioDB usuarioDB = new UsuarioDB();
 
-            //usuario = usuarioDB.Auntenticar(login);
+            usuario = usuarioDB.Auntenticar(login);
 
-            MenuForm menuFormulario = new MenuForm();
-            this.Hide();
-            menuFormulario.Show();
+            if (usuario != null)
+            {
+                if (usuario.EstaActivo)
+                {
+                    //System.Security.Principal.GenericIdentity identidad = new System.Security.Principal.GenericIdentity(usuario.CodigoUsuario);
+                    //System.Security.Principal.GenericPrincipal principal = new System.Security.Principal.GenericPrincipal(identidad, new string[] { usuario.Rol });
+                    //System.Threading.Thread.CurrentPrincipal = principal;
 
-            //if (usuario != null)
-            //{
-            //    if (usuario.EstaActivo)
-            //    {
-            //        System.Security.Principal.GenericIdentity identidad = new System.Security.Principal.GenericIdentity(usuario.CodigoUsuario);
-            //        System.Security.Principal.GenericPrincipal principal = new System.Security.Principal.GenericPrincipal(identidad, new string[] { usuario.Rol });
-            //        System.Threading.Thread.CurrentPrincipal = principal;
-
-            //        //Mostramos el Menú
-            //        Menu menuFormulario = new Menu();
-            //        this.Hide();
-            //        menuFormulario.Show();
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("El Usuario no Esta Activo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    }
-
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Datos de Usuario Incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-
-            ////instanciar objeto
-
+                    Menu menuFormulario = new Menu();
+                    this.Hide();
+                    menuFormulario.Show();
+                }
+                else
+                {
+                    MessageBox.Show("El Usuario no Esta Activo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Datos de Usuario Incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void MostrarContraseñaButton_Click(object sender, EventArgs e)

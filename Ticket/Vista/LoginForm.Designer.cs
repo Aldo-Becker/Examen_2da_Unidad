@@ -86,9 +86,9 @@
             this.AceptarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AceptarButton.Image = global::Vista.Properties.Resources.aceptar;
             this.AceptarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AceptarButton.Location = new System.Drawing.Point(79, 145);
+            this.AceptarButton.Location = new System.Drawing.Point(79, 131);
             this.AceptarButton.Name = "AceptarButton";
-            this.AceptarButton.Size = new System.Drawing.Size(105, 31);
+            this.AceptarButton.Size = new System.Drawing.Size(105, 45);
             this.AceptarButton.TabIndex = 5;
             this.AceptarButton.Text = "Aceptar";
             this.AceptarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -101,9 +101,9 @@
             this.CancelarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelarButton.Image = global::Vista.Properties.Resources.cancelar;
             this.CancelarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CancelarButton.Location = new System.Drawing.Point(202, 145);
+            this.CancelarButton.Location = new System.Drawing.Point(202, 131);
             this.CancelarButton.Name = "CancelarButton";
-            this.CancelarButton.Size = new System.Drawing.Size(105, 31);
+            this.CancelarButton.Size = new System.Drawing.Size(105, 45);
             this.CancelarButton.TabIndex = 6;
             this.CancelarButton.Text = "Cancelar";
             this.CancelarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
