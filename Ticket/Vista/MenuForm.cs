@@ -20,7 +20,7 @@ namespace Vista
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             TicketForm ticketForm = new TicketForm();
-            ticketForm.MdiParent = this;
+            //ticketForm.MdiParent = this;
             ticketForm.Show();
         }
     }
