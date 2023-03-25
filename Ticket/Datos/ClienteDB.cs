@@ -11,7 +11,7 @@ namespace Datos
 {
     public class ClienteDB
     {
-        string cadena = "server=localhost; user=root; database=Factura; password=SemitaSql";
+        string cadena = "server=localhost; user=root; database=ticket; password=123456";
 
         public DataTable DevolverClientes()
         {
@@ -73,5 +73,32 @@ namespace Datos
             }
             return cliente;
         }
+        public DataTable DevolverClientesPorNombre(string nombre)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                StringBuilder sql = new StringBuilder();
+                sql.Append(" SELECT * FROM cliente WHERE Nombre LIKE '%" + nombre + "%'");
+
+                using (MySqlConnection _conexion = new MySqlConnection(cadena))
+                {
+                    _conexion.Open();
+                    using (MySqlCommand comando = new MySqlCommand(sql.ToString(), _conexion))
+                    {
+                        comando.CommandType = CommandType.Text;
+                        MySqlDataReader dr = comando.ExecuteReader();
+                        dt.Load(dr);
+                    }
+                }
+            }
+            catch (System.Exception ex)
+            {
+            }
+            return dt;
+        }
+
+
+
     }
 }

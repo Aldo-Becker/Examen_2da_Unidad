@@ -50,9 +50,9 @@ namespace Vista
             {
                 if (usuario.EstaActivo)
                 {
-                    //System.Security.Principal.GenericIdentity identidad = new System.Security.Principal.GenericIdentity(usuario.CodigoUsuario);
-                    //System.Security.Principal.GenericPrincipal principal = new System.Security.Principal.GenericPrincipal(identidad, new string[] { usuario.Rol });
-                    //System.Threading.Thread.CurrentPrincipal = principal;
+                    System.Security.Principal.GenericIdentity identidad = new System.Security.Principal.GenericIdentity(usuario.CodigoUsuario);
+                    System.Security.Principal.GenericPrincipal principal = new System.Security.Principal.GenericPrincipal(identidad, new string[] { usuario.Rol });
+                    System.Threading.Thread.CurrentPrincipal = principal;
 
                     Menu menuFormulario = new Menu();
                     this.Hide();

@@ -8,7 +8,7 @@ namespace Datos
 {
     public class TicketDB
     {
-        string cadena = "server=localhost; user=root; database=Factura; password=SemitaSql";
+        string cadena = "server=localhost; user=root; database=ticket; password=123456";
 
 
 
