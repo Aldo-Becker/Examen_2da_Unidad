@@ -54,3 +54,4 @@ C:\Users\personal\Documents\Visual Studio 2022\Github\Examen_2da_Unidad\Examen_2
 C:\Users\personal\Documents\Visual Studio 2022\Github\Examen_2da_Unidad\Examen_2da_Unidad\Ticket\Vista\obj\Debug\Vista.exe.config
 C:\Users\personal\Documents\Visual Studio 2022\Github\Examen_2da_Unidad\Examen_2da_Unidad\Ticket\Vista\obj\Debug\Vista.Menu.resources
 C:\Users\personal\Documents\Visual Studio 2022\Github\Examen_2da_Unidad\Examen_2da_Unidad\Ticket\Vista\obj\Debug\Vista.BuscarClienteForm.resources
+C:\Users\personal\Documents\Visual Studio 2022\Github\Examen_2da_Unidad\Examen_2da_Unidad\Ticket\Vista\obj\Debug\Vista.AparatoForm.resources

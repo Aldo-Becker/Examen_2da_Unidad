@@ -52,14 +52,14 @@
             this.NombreTextBox.Location = new System.Drawing.Point(93, 22);
             this.NombreTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.NombreTextBox.Name = "NombreTextBox";
-            this.NombreTextBox.Size = new System.Drawing.Size(538, 22);
+            this.NombreTextBox.Size = new System.Drawing.Size(680, 22);
             this.NombreTextBox.TabIndex = 1;
             this.NombreTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.NombreTextBox_KeyUp);
             // 
             // AceptarButton
             // 
             this.AceptarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AceptarButton.Location = new System.Drawing.Point(399, 62);
+            this.AceptarButton.Location = new System.Drawing.Point(541, 62);
             this.AceptarButton.Name = "AceptarButton";
             this.AceptarButton.Size = new System.Drawing.Size(105, 34);
             this.AceptarButton.TabIndex = 2;
@@ -70,7 +70,7 @@
             // CancelarButton
             // 
             this.CancelarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CancelarButton.Location = new System.Drawing.Point(526, 62);
+            this.CancelarButton.Location = new System.Drawing.Point(668, 62);
             this.CancelarButton.Name = "CancelarButton";
             this.CancelarButton.Size = new System.Drawing.Size(105, 34);
             this.CancelarButton.TabIndex = 3;
@@ -83,14 +83,14 @@
             this.ClientesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ClientesDataGridView.Location = new System.Drawing.Point(12, 120);
             this.ClientesDataGridView.Name = "ClientesDataGridView";
-            this.ClientesDataGridView.Size = new System.Drawing.Size(619, 150);
+            this.ClientesDataGridView.Size = new System.Drawing.Size(762, 150);
             this.ClientesDataGridView.TabIndex = 4;
             // 
             // BuscarClienteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(648, 278);
+            this.ClientSize = new System.Drawing.Size(786, 278);
             this.Controls.Add(this.ClientesDataGridView);
             this.Controls.Add(this.CancelarButton);
             this.Controls.Add(this.AceptarButton);

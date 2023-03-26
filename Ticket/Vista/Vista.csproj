@@ -54,6 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AparatoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AparatoForm.Designer.cs">
+      <DependentUpon>AparatoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="BuscarClienteForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     <Compile Include="TicketForm.Designer.cs">
       <DependentUpon>TicketForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AparatoForm.resx">
+      <DependentUpon>AparatoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BuscarClienteForm.resx">
       <DependentUpon>BuscarClienteForm.cs</DependentUpon>
     </EmbeddedResource>
