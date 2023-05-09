@@ -28,7 +28,7 @@ namespace Datos
                     {
                         comando.CommandType = CommandType.Text;
                         comando.Parameters.Add("@CodigoUsuario", MySqlDbType.VarChar, 50).Value = login.CodigoUsuario;
-                        comando.Parameters.Add("@Contrasena", MySqlDbType.VarChar, 80).Value = login.Contraseña;
+                        comando.Parameters.Add("@Contrasena", MySqlDbType.VarChar, 80).Value = login.Contrasena;
 
                         MySqlDataReader dr = comando.ExecuteReader();
                         if (dr.Read())
@@ -37,7 +37,7 @@ namespace Datos
 
                             user.CodigoUsuario = dr["CodigoUsuario"].ToString();
                             user.Nombre = dr["Nombre"].ToString();
-                            user.Contraseña = dr["Contrasena"].ToString();
+                            user.Contrasena = dr["Contrasena"].ToString();
                             user.Correo = dr["Correo"].ToString();
                             user.Rol = dr["Rol"].ToString();
                             user.FechaCreacion = Convert.ToDateTime(dr["FechaCreacion"]);
@@ -69,7 +69,7 @@ namespace Datos
                         comando.CommandType = CommandType.Text;
                         comando.Parameters.Add("@CodigoUsuario", MySqlDbType.VarChar, 50).Value = user.CodigoUsuario;
                         comando.Parameters.Add("@Nombre", MySqlDbType.VarChar, 50).Value = user.Nombre;
-                        comando.Parameters.Add("@Contrasena", MySqlDbType.VarChar, 80).Value = user.Contraseña;
+                        comando.Parameters.Add("@Contrasena", MySqlDbType.VarChar, 80).Value = user.Contrasena;
                         comando.Parameters.Add("@Correo", MySqlDbType.VarChar, 45).Value = user.Correo; 
                         comando.Parameters.Add("@Rol", MySqlDbType.VarChar, 20).Value = user.Rol;
                         comando.Parameters.Add("@FechaCreacion", MySqlDbType.DateTime).Value = user.FechaCreacion;
@@ -104,7 +104,7 @@ namespace Datos
                         comando.CommandType = CommandType.Text;
                         comando.Parameters.Add("@CodigoUsuario", MySqlDbType.VarChar, 50).Value = user.CodigoUsuario;
                         comando.Parameters.Add("@Nombre", MySqlDbType.VarChar, 50).Value = user.Nombre;
-                        comando.Parameters.Add("@Contrasena", MySqlDbType.VarChar, 80).Value = user.Contraseña;
+                        comando.Parameters.Add("@Contrasena", MySqlDbType.VarChar, 80).Value = user.Contrasena;
                         comando.Parameters.Add("@Correo", MySqlDbType.VarChar, 45).Value = user.Correo;
                         comando.Parameters.Add("@Rol", MySqlDbType.VarChar, 20).Value = user.Rol;
                         comando.Parameters.Add("@FechaCreacion", MySqlDbType.DateTime).Value = user.FechaCreacion;

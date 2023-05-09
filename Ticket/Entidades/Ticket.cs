@@ -12,10 +12,7 @@ namespace Entidades
         public DateTime Fecha { get; set; }
         public string IdentidadCliente { get; set; }
         public string CodigoUsuario { get; set; }
-        public string TipoSoporte { get; set; }
-        public string DescripcionSolicitud { get; set; }
-        public string DescripcionRespuesta { get; set; }
-        public decimal Precio { get; set; }
+        public decimal SubTotal { get; set; }
         public decimal ISV { get; set; }
         public decimal Descuento { get; set; }
         public decimal Total { get; set; }
@@ -24,16 +21,13 @@ namespace Entidades
         {
         }
 
-        public Ticket(int id, DateTime fecha, string identidadCliente, string codigoUsuario, string tipoSoporte, string descripcionSolicitud, string descripcionRespuesta, decimal precio, decimal iSV, decimal descuento, decimal total)
+        public Ticket(int id, DateTime fecha, string identidadCliente, string codigoUsuario, decimal subTotal, decimal iSV, decimal descuento, decimal total)
         {
             Id = id;
             Fecha = fecha;
             IdentidadCliente = identidadCliente;
             CodigoUsuario = codigoUsuario;
-            TipoSoporte = tipoSoporte;
-            DescripcionSolicitud = descripcionSolicitud;
-            DescripcionRespuesta = descripcionRespuesta;
-            Precio = precio;
+            SubTotal = subTotal;
             ISV = iSV;
             Descuento = descuento;
             Total = total;

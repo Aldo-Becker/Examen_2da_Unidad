@@ -54,17 +54,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AparatoForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AparatoForm.Designer.cs">
-      <DependentUpon>AparatoForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="BuscarClienteForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BuscarClienteForm.Designer.cs">
       <DependentUpon>BuscarClienteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClienteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClienteForm.Designer.cs">
+      <DependentUpon>ClienteForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -86,11 +86,11 @@
     <Compile Include="TicketForm.Designer.cs">
       <DependentUpon>TicketForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AparatoForm.resx">
-      <DependentUpon>AparatoForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="BuscarClienteForm.resx">
       <DependentUpon>BuscarClienteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClienteForm.resx">
+      <DependentUpon>ClienteForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

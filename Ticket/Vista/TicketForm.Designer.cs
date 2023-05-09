@@ -48,7 +48,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.TotalTextBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.CancelarButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -57,6 +57,10 @@
             this.TipoSoporteComboBox = new System.Windows.Forms.ComboBox();
             this.RespuestaTextBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.SubTotalTextBox = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.AgregarButton = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DetalleDataGridView)).BeginInit();
@@ -183,17 +187,17 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(592, 439);
+            this.label5.Location = new System.Drawing.Point(530, 36);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 16);
+            this.label5.Size = new System.Drawing.Size(85, 16);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Precio:";
+            this.label5.Text = "Precio Lps:";
             // 
             // PrecioTextBox
             // 
-            this.PrecioTextBox.Location = new System.Drawing.Point(701, 436);
+            this.PrecioTextBox.Location = new System.Drawing.Point(631, 33);
             this.PrecioTextBox.Name = "PrecioTextBox";
-            this.PrecioTextBox.Size = new System.Drawing.Size(128, 22);
+            this.PrecioTextBox.Size = new System.Drawing.Size(101, 22);
             this.PrecioTextBox.TabIndex = 5;
             this.PrecioTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PrecioTextBox_KeyPress);
             // 
@@ -251,18 +255,19 @@
             this.label8.TabIndex = 10;
             this.label8.Text = "Total a Pagar:";
             // 
-            // button2
+            // CancelarButton
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::Vista.Properties.Resources.prohibido;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(125, 491);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 45);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Cancelar";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = true;
+            this.CancelarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelarButton.Image = global::Vista.Properties.Resources.prohibido;
+            this.CancelarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CancelarButton.Location = new System.Drawing.Point(125, 491);
+            this.CancelarButton.Name = "CancelarButton";
+            this.CancelarButton.Size = new System.Drawing.Size(100, 45);
+            this.CancelarButton.TabIndex = 13;
+            this.CancelarButton.Text = "Cancelar";
+            this.CancelarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.CancelarButton.UseVisualStyleBackColor = true;
+            this.CancelarButton.Click += new System.EventHandler(this.CancelarButton_Click);
             // 
             // GuardarButton
             // 
@@ -280,12 +285,16 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.AgregarButton);
+            this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.SolicitudTextBox);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.TipoSoporteComboBox);
             this.groupBox3.Controls.Add(this.RespuestaTextBox);
             this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Controls.Add(this.PrecioTextBox);
+            this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Location = new System.Drawing.Point(12, 161);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(808, 119);
@@ -326,9 +335,9 @@
             this.TipoSoporteComboBox.Items.AddRange(new object[] {
             "Celular",
             "Equipo de Computo"});
-            this.TipoSoporteComboBox.Location = new System.Drawing.Point(189, 29);
+            this.TipoSoporteComboBox.Location = new System.Drawing.Point(189, 32);
             this.TipoSoporteComboBox.Name = "TipoSoporteComboBox";
-            this.TipoSoporteComboBox.Size = new System.Drawing.Size(580, 24);
+            this.TipoSoporteComboBox.Size = new System.Drawing.Size(308, 24);
             this.TipoSoporteComboBox.TabIndex = 2;
             // 
             // RespuestaTextBox
@@ -342,11 +351,47 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(6, 37);
+            this.label9.Location = new System.Drawing.Point(6, 36);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(102, 16);
             this.label9.TabIndex = 0;
             this.label9.Text = "Tipo Soporte:";
+            // 
+            // SubTotalTextBox
+            // 
+            this.SubTotalTextBox.Location = new System.Drawing.Point(701, 436);
+            this.SubTotalTextBox.Name = "SubTotalTextBox";
+            this.SubTotalTextBox.Size = new System.Drawing.Size(128, 22);
+            this.SubTotalTextBox.TabIndex = 16;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(592, 439);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(78, 16);
+            this.label11.TabIndex = 15;
+            this.label11.Text = "Sub Total:";
+            // 
+            // AgregarButton
+            // 
+            this.AgregarButton.Image = global::Vista.Properties.Resources.aceptar;
+            this.AgregarButton.Location = new System.Drawing.Point(738, 29);
+            this.AgregarButton.Name = "AgregarButton";
+            this.AgregarButton.Size = new System.Drawing.Size(31, 30);
+            this.AgregarButton.TabIndex = 17;
+            this.AgregarButton.UseVisualStyleBackColor = true;
+            this.AgregarButton.Click += new System.EventHandler(this.AgregarButton_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(363, 36);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(0, 16);
+            this.label13.TabIndex = 7;
             // 
             // TicketForm
             // 
@@ -354,8 +399,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(832, 548);
+            this.Controls.Add(this.SubTotalTextBox);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.CancelarButton);
             this.Controls.Add(this.GuardarButton);
             this.Controls.Add(this.TotalTextBox);
             this.Controls.Add(this.label8);
@@ -363,8 +410,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.ISVTextBox);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.PrecioTextBox);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.DetalleDataGridView);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -409,7 +454,7 @@
         private System.Windows.Forms.TextBox TotalTextBox;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button GuardarButton;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button CancelarButton;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ComboBox TipoSoporteComboBox;
         private System.Windows.Forms.TextBox RespuestaTextBox;
@@ -417,5 +462,9 @@
         private System.Windows.Forms.TextBox SolicitudTextBox;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox SubTotalTextBox;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button AgregarButton;
+        private System.Windows.Forms.Label label13;
     }
 }

@@ -6,14 +6,29 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class DetalleMantenimiento
+    public class DetalleTicket
     {
         public int Id { get; set; }
-        public string Nombre { get; set; }
-        public string Telefono { get; set; }
-        public string Correo { get; set; }
-        public string Direccion { get; set; }
-        public DateTime FechaNacimiento { get; set; }
-        public bool EstaActivo { get; set; }
+        public int IdTicket { get; set; }
+        public string TipoSoporte { get; set; }
+        public string DescripcionSolicitud { get; set; }
+        public string DescripcionRespuesta { get; set; }
+        public decimal Precio { get; set; }
+        public decimal Total { get; set; }
+
+        public DetalleTicket()
+        {
+        }
+
+        public DetalleTicket(int id, int idTicket, string tipoSoporte, string descripcionSolicitud, string descripcionRespuesta, decimal precio, decimal total)
+        {
+            Id = id;
+            IdTicket = idTicket;
+            TipoSoporte = tipoSoporte;
+            DescripcionSolicitud = descripcionSolicitud;
+            DescripcionRespuesta = descripcionRespuesta;
+            Precio = precio;
+            Total = total;
+        }
     }
 }
